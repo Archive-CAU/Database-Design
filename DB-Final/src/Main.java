@@ -8,12 +8,10 @@ import java.sql.Statement;
 
 import java.util.Scanner;
 
-
 public class Main {
 	static final String DB_URL = "jdbc:mysql://localhost/coupang?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	static final String USER = "root"; // user name
 	static final String PASS = "mjhj6775@@"; // user password
-	//static final String QUERY = "select * from item"; // input query
 	
 	public static void main(String[] args) throws SQLException{
 		Connection conn = null;
@@ -95,14 +93,12 @@ public class Main {
 				
 				System.out.print("order_date: ");
 				String orderDate = scanner.next();
-				//java.sql.Date orderDate = java.sql.Date.valueOf(dt);
 						
 				System.out.print("num_of_item: ");
 				int num_of_item = scanner.nextInt();
 				
 				System.out.print("total_price: ");
 				int totalPrice = scanner.nextInt();
-				
 				
 				pstmt.setInt(1, orderId);
 				pstmt.setInt(2, userId);
@@ -134,7 +130,7 @@ public class Main {
 			option = scanner.nextInt();
 			
 		case 3:
-			
+			break;
 		}		
 		scanner.close();
 	}
