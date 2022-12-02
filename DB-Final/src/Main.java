@@ -50,6 +50,8 @@ public class Main {
 				rs = stmt.executeQuery(query1);
 				
 				int itemNum = 1;
+				System.out.println("");
+				
 				while (rs.next()) {
 					System.out.println(category +" " + itemNum +") " + rs.getString("item_name"));
 					itemNum++;
